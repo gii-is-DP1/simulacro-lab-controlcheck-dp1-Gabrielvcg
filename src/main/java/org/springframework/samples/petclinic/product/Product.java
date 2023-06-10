@@ -20,10 +20,11 @@ import lombok.Setter;
 @Table(name="products")
 public class Product extends NamedEntity {
 
-
-    
 	@Column(nullable=false)
     @Min(0)
     double price;
     
+    @ManyToOne
+    @JoinColumn(name = "productType")
+    ProductType productType;
 }
