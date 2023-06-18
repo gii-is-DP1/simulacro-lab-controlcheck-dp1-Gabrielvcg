@@ -13,14 +13,14 @@ public class ProductService {
     }
    
     public List<ProductType> getAllProductTypes(){
-        return null;
+        return repo.findAllProductTypes();
     }
     public List<Product> getAllProducts(){
         return repo.findAll();
     }
 
     public List<Product> getProductsCheaperThan(double price) {
-        return null;
+        return repo.findByPriceLessThan(price);
     }
 
     public ProductType getProductType(String typeName) {
